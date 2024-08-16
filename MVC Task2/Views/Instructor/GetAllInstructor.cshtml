@@ -1,0 +1,27 @@
+﻿@model List<Instructor>
+
+	<h1>
+		Instructor List...
+	</h1>
+
+<hr />
+
+
+@foreach (Instructor instructor in Model)
+{
+        <div class="col-sm-5" style="display:inline-block;margin-top:5px;">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">@instructor.Name</h5>
+                    <p class="card-text">Department: @instructor.Department.Name</p>
+                    <a href="/Instructor/Details/@instructor.Id" class="btn btn-primary">Details</a>
+                </div>
+            </div>
+        </div>
+        
+        <pre style="display:inline-block">     </pre>
+}
+
+
+
+
